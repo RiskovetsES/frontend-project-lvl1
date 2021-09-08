@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/RiskovetsES/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/RiskovetsES/frontend-project-lvl1/actions)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,8 +13,10 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
