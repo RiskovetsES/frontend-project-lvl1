@@ -14,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
