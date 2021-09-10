@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import greetingUser from '../src/cli.js';
 
-greetingUser();
+import Logic from '../src/index.js';
+
+Logic.prototype.greetingUser();
