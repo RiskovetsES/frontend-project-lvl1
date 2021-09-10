@@ -1,9 +1,4 @@
-import { question } from 'readline-sync';
 import Logic from '../src/index.js';
-
-function checkAnswer(ans, res) {
-  return +ans === res;
-}
 
 function calcStr(str) {
   const arr = str.split(' ');
@@ -15,9 +10,9 @@ function calcStr(str) {
 
 function genExpr() {
   const symbols = ['+', '-', '*'];
-  const index = Logic.prototype.generateRandomNum(3);
-  const a = Logic.prototype.generateRandomNum(10);
-  const b = Logic.prototype.generateRandomNum(10);
+  const index = Logic.prototype.generateRandomNum(0, 3);
+  const a = Logic.prototype.generateRandomNum();
+  const b = Logic.prototype.generateRandomNum();
   return `${a} ${symbols[index]} ${b} `;
 }
 
@@ -28,16 +23,7 @@ function calc(name = 'User') {
     const expr = genExpr();
     const answer = Logic.prototype.question(expr);
     const result = calcStr(expr);
-    if (checkAnswer(answer, result)) {
-      console.log('Correct!');
-      counter += 1;
-    } else {
-      console.log(`Your answer: ${answer}
-        '${answer}' is wrong answer ;(. Correct answer was '${result}'.
-         Let's try again, ${name}!`);
-      break;
-    }
-    if (counter === 3) console.log(`Congratulations ${name}!`);
+    counter = Logic.prototype.gameBody(answer, result, counter, name);
   }
 }
 

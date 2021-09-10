@@ -4,3 +4,4 @@
 ![example workflow](https://github.com/RiskovetsES/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)
 https://asciinema.org/a/DpWFydmdio8iZd1teGGOPCXNA
 https://asciinema.org/a/zbPhkZ6Ayd99uYCswx0QgsI6B
+https://asciinema.org/a/gG8K618mZuQ3mpWuc86fPubhy

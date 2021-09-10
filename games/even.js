@@ -1,4 +1,3 @@
-import { question } from 'readline-sync';
 import Logic from '../src/index.js';
 
 function checkAnswer(num, ans) {
