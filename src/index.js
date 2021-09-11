@@ -22,7 +22,7 @@ Logic.prototype.question = function question(num) {
 };
 
 Logic.prototype.generateRandomNum = function generateRandomNum(min = 0, max = 100) {
-  return Math.floor(Math.random() * max + min);
+  return Math.floor(Math.random() * (max - min)) + min;
 };
 
 Logic.prototype.checkAnswer = function checkAnswer(ans, res) {
