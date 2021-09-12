@@ -26,6 +26,9 @@ Logic.prototype.generateRandomNum = function generateRandomNum(min = 0, max = 10
 };
 
 Logic.prototype.checkAnswer = function checkAnswer(ans, res) {
+  if (ans === 'no' || ans === 'yes') {
+    return ans === res;
+  }
   return +ans === res;
 };
 
