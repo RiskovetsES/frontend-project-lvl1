@@ -6,14 +6,14 @@ function generateProgression() {
   const emptyPlace = Logic.prototype.generateRandomNum(2, 9);
   const obj = {
     expectedAnswer: 0,
-    expr: [],
+    progressionArr: [],
   };
-  for (let i = start, j = 0; obj.expr.length < 10; i += step, j += 1) {
+  for (let i = start, j = 0; obj.progressionArr.length < 10; i += step, j += 1) {
     if (j === emptyPlace) {
-      obj.expr.push('..');
+      obj.progressionArr.push('..');
       obj.expectedAnswer = i;
     } else {
-      obj.expr.push(i);
+      obj.progressionArr.push(i);
     }
   }
   return obj;
@@ -25,8 +25,9 @@ function progression(name = 'User') {
   while (roundCount < 3) {
     const {
       expectedAnswer,
-      expr,
+      progressionArr,
     } = generateProgression();
+    const expr = progressionArr.join(' ');
     const answer = Logic.prototype.question(expr);
     roundCount = Logic.prototype.gameBody(answer, expectedAnswer, roundCount, name);
   }
