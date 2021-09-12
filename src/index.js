@@ -43,7 +43,7 @@ Logic.prototype.gameBody = function gameBody(answer, expectedAnswer, roundCount,
          Let's try again, ${name}!`);
     counter = Infinity;
   }
-  if (counter === 3) console.log(`Congratulations ${name}!`);
+  if (counter === 3) console.log(`Congratulations, ${name}!`);
   return counter;
 };
 
