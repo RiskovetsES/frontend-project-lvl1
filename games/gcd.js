@@ -24,12 +24,12 @@ function gcdCount(a, b) {
 
 function gcd(name = 'User') {
   console.log('Find the greatest common divisor of given numbers.');
-  let counter = 0;
-  while (counter < 3) {
+  let roundCount = 0;
+  while (roundCount < 3) {
     const expr = generateNumbers();
-    const result = gcdCount(...expr.split(' '));
+    const expectedAnswer = gcdCount(...expr.split(' '));
     const answer = Logic.prototype.question(expr);
-    counter = Logic.prototype.gameBody(answer, result, counter, name);
+    roundCount = Logic.prototype.gameBody(answer, expectedAnswer, roundCount, name);
   }
 }
 

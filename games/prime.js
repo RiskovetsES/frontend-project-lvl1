@@ -9,12 +9,12 @@ function chekNum(num) {
 
 function prime(name = 'User') {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  let counter = 0;
-  while (counter < 3) {
+  let roundCount = 0;
+  while (roundCount < 3) {
     const expr = Logic.prototype.generateRandomNum(2, 20);
     const answer = Logic.prototype.question(expr);
-    const result = chekNum(expr);
-    counter = Logic.prototype.gameBody(answer, result, counter, name);
+    const expectedAnswer = chekNum(expr);
+    roundCount = Logic.prototype.gameBody(answer, expectedAnswer, roundCount, name);
   }
 }
 

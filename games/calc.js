@@ -18,12 +18,12 @@ function genExpr() {
 
 function calc(name = 'User') {
   console.log('What is the result of the expression?');
-  let counter = 0;
-  while (counter < 3) {
+  let roundCount = 0;
+  while (roundCount < 3) {
     const expr = genExpr();
     const answer = Logic.prototype.question(expr);
-    const result = calcStr(expr);
-    counter = Logic.prototype.gameBody(answer, result, counter, name);
+    const expectedAnswer = calcStr(expr);
+    roundCount = Logic.prototype.gameBody(answer, expectedAnswer, roundCount, name);
   }
 }
 

@@ -5,13 +5,13 @@ function generateProgression() {
   const start = Logic.prototype.generateRandomNum();
   const emptyPlace = Logic.prototype.generateRandomNum(2, 9);
   const obj = {
-    result: 0,
+    expectedAnswer: 0,
     expr: [],
   };
   for (let i = start, j = 0; obj.expr.length < 10; i += step, j += 1) {
     if (j === emptyPlace) {
       obj.expr.push('..');
-      obj.result = i;
+      obj.expectedAnswer = i;
     } else {
       obj.expr.push(i);
     }
@@ -21,14 +21,14 @@ function generateProgression() {
 
 function progression(name = 'User') {
   console.log('What number is missing in the progression?');
-  let counter = 0;
-  while (counter < 3) {
+  let roundCount = 0;
+  while (roundCount < 3) {
     const {
-      result,
+      expectedAnswer,
       expr,
     } = generateProgression();
     const answer = Logic.prototype.question(expr);
-    counter = Logic.prototype.gameBody(answer, result, counter, name);
+    roundCount = Logic.prototype.gameBody(answer, expectedAnswer, roundCount, name);
   }
 }
 

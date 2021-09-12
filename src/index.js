@@ -32,14 +32,14 @@ Logic.prototype.checkAnswer = function checkAnswer(ans, res) {
   return +ans === res;
 };
 
-Logic.prototype.gameBody = function gameBody(answer, result, count, name) {
-  let counter = count;
-  if (Logic.prototype.checkAnswer(answer, result)) {
+Logic.prototype.gameBody = function gameBody(answer, expectedAnswer, roundCount, name) {
+  let counter = roundCount;
+  if (Logic.prototype.checkAnswer(answer, expectedAnswer)) {
     console.log('Correct!');
     counter += 1;
   } else {
     console.log(`Your answer: ${answer}
-        '${answer}' is wrong answer ;(. Correct answer was '${result}'.
+        '${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.
          Let's try again, ${name}!`);
     counter = Infinity;
   }
